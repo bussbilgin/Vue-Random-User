@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Random User</title>
+</head>
+<body>
+    <div id="app">  <!-- root (uygulamanın kökü) -->
+        <img class="app__profile" :class="gender" :src="picture" :alt="`${firstName} ${lastName}`">
+        <h1 class="app__name">{{firstName}} {{lastName}}</h1>
+        <h3 class="app__email">Email: {{email}}</h3>
+        <button class="app__button"  v-on:click="getUser()" :class="gender">Get Random User</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+</html>
